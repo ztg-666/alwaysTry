@@ -1,61 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <title>健康社区 - 您的健康管理平台</title>
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-    <header class="site-header">
-      <div class="logo">My Site</div>
-      <nav class="nav">
-        <a href="#home">首页</a>
-        <a href="#about">关于</a>
-        <a href="#contact">联系</a>
-      </nav>
-    </header>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>健康社区</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="knowledge.html">健康知识</a></li>
+                <li><a href="community.html">社区交流</a></li>
+                <li><a href="services.html">健康服务</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索健康知识...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </nav>
 
-    <!-- 主内容 -->
-    <main>
-      <section id="home" class="section hero">
-        <h1>欢迎来到我的网站</h1>
-        <p>这是一个只用 HTML + CSS + JS 实现的纯静态网站。</p>
-        <button id="cta-btn">点我试试看</button>
-      </section>
+    <!-- 轮播图 -->
+    <section class="hero-slider">
+        <div class="slider-container">
+            <div class="slide active">
+                <img src="images/banner1.jpg" alt="健康生活">
+                <div class="slide-content">
+                    <h2>健康生活从这里开始</h2>
+                    <p>专业的健康知识与贴心的健康服务</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/banner2.jpg" alt="营养饮食">
+                <div class="slide-content">
+                    <h2>科学饮食 健康营养</h2>
+                    <p>为您提供个性化的营养建议</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/banner3.jpg" alt="运动健身">
+                <div class="slide-content">
+                    <h2>运动健身 活力无限</h2>
+                    <p>科学运动方案 塑造健康体魄</p>
+                </div>
+            </div>
+        </div>
+        <button class="slider-btn prev">&lt;</button>
+        <button class="slider-btn next">&gt;</button>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
 
-      <section id="about" class="section">
-        <h2>关于我</h2>
-        <p>这里写你的介绍、项目经验、作品链接等。</p>
-      </section>
+    <!-- 快捷入口 -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="link-card">
+                <div class="icon">🏥</div>
+                <h3>疾病预防</h3>
+                <p>科学预防常见疾病</p>
+            </div>
+            <div class="link-card">
+                <div class="icon">🥗</div>
+                <h3>饮食营养</h3>
+                <p>健康饮食指导</p>
+            </div>
+            <div class="link-card">
+                <div class="icon">💪</div>
+                <h3>运动健身</h3>
+                <p>科学运动方案</p>
+            </div>
+            <div class="link-card">
+                <div class="icon">🧘</div>
+                <h3>心理健康</h3>
+                <p>关注心理健康</p>
+            </div>
+        </div>
+    </section>
 
-      <section id="contact" class="section">
-        <h2>联系我</h2>
-        <form id="contact-form">
-          <label>
-            邮箱：
-            <input type="email" id="email" required />
-          </label>
-          <label>
-            留言：
-            <textarea id="message" required></textarea>
-          </label>
-          <button type="submit">发送</button>
-        </form>
-        <p id="form-result" class="hidden"></p>
-      </section>
-    </main>
+    <!-- 热门文章 -->
+    <section class="featured-articles">
+        <div class="container">
+            <h2 class="section-title">热门健康知识</h2>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <img src="images/article1.jpg" alt="文章1">
+                    <div class="article-content">
+                        <h3>如何科学预防流感</h3>
+                        <p class="article-meta">2024-11-15 | 疾病预防</p>
+                        <p class="article-excerpt">流感是常见的呼吸道传染病，掌握科学的预防方法能够有效降低感染风险...</p>
+                        <a href="article.html" class="read-more">阅读更多 →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="images/article2.jpg" alt="文章2">
+                    <div class="article-content">
+                        <h3>营养均衡的一日三餐</h3>
+                        <p class="article-meta">2024-11-14 | 饮食营养</p>
+                        <p class="article-excerpt">合理搭配一日三餐，确保营养均衡摄入，是维持身体健康的基础...</p>
+                        <a href="article.html" class="read-more">阅读更多 →</a>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <img src="images/article3.jpg" alt="文章3">
+                    <div class="article-content">
+                        <h3>适合上班族的健身计划</h3>
+                        <p class="article-meta">2024-11-13 | 运动健身</p>
+                        <p class="article-excerpt">工作繁忙不是借口，为上班族量身定制的健身方案，让您保持活力...</p>
+                        <a href="article.html" class="read-more">阅读更多 →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区互动 -->
+    <section class="community-section">
+        <div class="container">
+            <h2 class="section-title">社区互动</h2>
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="user-info">
+                        <img src="images/user1.jpg" alt="用户头像">
+                        <span>张女士</span>
+                    </div>
+                    <p>请问糖尿病患者饮食应该注意什么？</p>
+                    <div class="card-footer">
+                        <span>💬 12回复</span>
+                        <span>👍 28</span>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <div class="user-info">
+                        <img src="images/user2.jpg" alt="用户头像">
+                        <span>李先生</span>
+                    </div>
+                    <p>分享我的减肥成功经验，3个月减重15斤！</p>
+                    <div class="card-footer">
+                        <span>💬 45回复</span>
+                        <span>👍 156</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- 页脚 -->
-    <footer class="site-footer">
-      © <span id="year"></span> My Site. All rights reserved.
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>健康社区致力于为用户提供专业、便捷的健康服务平台</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快捷链接</h3>
+                    <ul>
+                        <li><a href="knowledge.html">健康知识</a></li>
+                        <li><a href="community.html">社区交流</a></li>
+                        <li><a href="services.html">健康服务</a></li>
+                        <li><a href="about.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>📧 contact@health-community.com</p>
+                    <p>📱 400-123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2077 健康社区. 版权所有</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- 引入 JS -->
-    <script src="main.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
+
 </body>
 </html>

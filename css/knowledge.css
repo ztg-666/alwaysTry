@@ -1,0 +1,258 @@
+/* ==================== 页面头部 ==================== */
+.page-header {
+    background: linear-gradient(135deg, #E6FFFB, #FFF7E6);
+    padding: 40px 0 30px;
+    margin-bottom: 30px;
+}
+
+.page-header .section-title {
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+}
+
+.breadcrumb a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #87E8DE;
+}
+
+/* ==================== 布局 ==================== */
+.knowledge-main {
+    padding: 20px 0 40px;
+}
+
+.knowledge-layout {
+    display: grid;
+    grid-template-columns: 3fr 1.2fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ==================== 筛选与排序 ==================== */
+.knowledge-filters,
+.knowledge-sort {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.knowledge-filters {
+    margin-bottom: 10px;
+}
+
+.filter-label {
+    font-size: 14px;
+    color: #666666;
+    margin-right: 5px;
+}
+
+.filter-btn,
+.sort-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-btn:hover,
+.sort-btn:hover {
+    border-color: #87E8DE;
+    color: #333333;
+}
+
+.filter-btn.active,
+.sort-btn.active {
+    background-color: #87E8DE;
+    border-color: #87E8DE;
+    color: #ffffff;
+}
+
+/* ==================== 文章列表 ==================== */
+.knowledge-list {
+    margin-top: 10px;
+}
+
+.knowledge-item {
+    border: 1px solid #F0F0F0;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.knowledge-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transform: translateY(-2px);
+    border-color: #E6FFFB;
+}
+
+.knowledge-title {
+    font-size: 18px;
+    color: #333333;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.knowledge-title:hover {
+    color: #87E8DE;
+}
+
+.knowledge-meta {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 10px;
+}
+
+.knowledge-excerpt {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.knowledge-item .read-more {
+    font-size: 14px;
+    color: #87E8DE;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.knowledge-item .read-more:hover {
+    color: #FFC8A2;
+}
+
+/* ==================== 分页 ==================== */
+.knowledge-pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    min-width: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-btn:hover {
+    border-color: #87E8DE;
+    color: #333333;
+}
+
+.page-btn.active {
+    background-color: #87E8DE;
+    border-color: #87E8DE;
+    color: #FFFFFF;
+}
+
+.page-btn.disabled {
+    color: #CCCCCC;
+    border-color: #F0F0F0;
+    cursor: not-allowed;
+}
+
+/* ==================== 侧边栏 ==================== */
+.knowledge-sidebar {
+    position: sticky;
+    top: 90px; /* 考虑导航高度 */
+}
+
+.sidebar-block {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.sidebar-block h3 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 8px;
+}
+
+.sidebar-list a {
+    font-size: 14px;
+    color: #555555;
+    text-decoration: none;
+    line-height: 1.5;
+    display: inline-block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar-list a:hover {
+    color: #87E8DE;
+    transform: translateX(2px);
+}
+
+/* 标签云 */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    background-color: #F7F7F7;
+    color: #666666;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.tag-cloud a:hover {
+    background-color: #E6FFFB;
+    color: #333333;
+}

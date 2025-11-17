@@ -1,0 +1,472 @@
+/* ==================== 页面头部 ==================== */
+.page-header {
+    background: linear-gradient(135deg, #E6FFFB, #FFF7E6);
+    padding: 40px 0 30px;
+    margin-bottom: 30px;
+}
+
+.page-header .section-title {
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
+    text-align: center;
+    font-size: 13px;
+    color: #999999;
+}
+
+.breadcrumb a {
+    color: #666666;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+    color: #87E8DE;
+}
+
+/* ==================== 布局 ==================== */
+.community-main {
+    padding: 20px 0 40px;
+}
+
+.community-layout {
+    display: grid;
+    grid-template-columns: 3fr 1.2fr;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* ==================== 发帖区域 ==================== */
+.create-post-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 18px 20px 16px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    margin-bottom: 20px;
+}
+
+.create-post-title {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.create-post-form .form-row {
+    margin-bottom: 10px;
+}
+
+.post-title-input,
+.post-content-input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #E0E0E0;
+    padding: 8px 10px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    resize: vertical;
+}
+
+.post-title-input:focus,
+.post-content-input:focus {
+    border-color: #87E8DE;
+    box-shadow: 0 0 0 2px rgba(135, 232, 222, 0.25);
+}
+
+.form-row-bottom {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.post-category-select {
+    flex: 1 1 180px;
+    min-width: 160px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #666666;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.post-category-select:focus {
+    border-color: #87E8DE;
+    box-shadow: 0 0 0 2px rgba(135, 232, 222, 0.2);
+}
+
+.post-submit-btn {
+    flex: 0 0 auto;
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: none;
+    background-color: #87E8DE;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.post-submit-btn:hover {
+    background-color: #6FD5CB;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    transform: translateY(-1px);
+}
+
+.post-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.create-post-tip {
+    font-size: 12px;
+    color: #999999;
+    margin-top: 2px;
+}
+
+/* ==================== 筛选与排序 ==================== */
+.community-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-left,
+.filter-right {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.filter-label {
+    font-size: 13px;
+    color: #666666;
+}
+
+.community-filter-btn,
+.community-sort-btn {
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
+    background-color: #FFFFFF;
+    font-size: 13px;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.community-filter-btn:hover,
+.community-sort-btn:hover {
+    border-color: #87E8DE;
+    color: #333333;
+}
+
+.community-filter-btn.active,
+.community-sort-btn.active {
+    background-color: #87E8DE;
+    border-color: #87E8DE;
+    color: #FFFFFF;
+}
+
+/* ==================== 帖子列表 ==================== */
+.community-list {
+    margin-top: 6px;
+}
+
+.community-item {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 16px 18px 14px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    margin-bottom: 14px;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+
+.community-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transform: translateY(-2px);
+    border-color: #E6FFFB;
+}
+
+.community-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-info img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-name {
+    font-size: 14px;
+    color: #333333;
+}
+
+.user-tag {
+    font-size: 12px;
+    color: #999999;
+}
+
+.post-tag {
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+/* 分类标签颜色 */
+.tag-disease {
+    background-color: #FFF1F0;
+    color: #CF1322;
+    border-color: #FFA39E;
+}
+
+.tag-sport {
+    background-color: #F6FFED;
+    color: #237804;
+    border-color: #B7EB8F;
+}
+
+.tag-mental {
+    background-color: #F9F0FF;
+    color: #531DAB;
+    border-color: #D3ADF7;
+}
+
+.tag-diet {
+    background-color: #FFF7E6;
+    color: #AD4E00;
+    border-color: #FFD591;
+}
+
+.tag-life {
+    background-color: #E6FFFB;
+    color: #006D75;
+    border-color: #87E8DE;
+}
+
+.community-title {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 8px;
+    cursor: pointer;
+    line-height: 1.5;
+    transition: color 0.3s;
+}
+
+.community-title:hover {
+    color: #87E8DE;
+}
+
+.community-excerpt {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.community-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.meta-time {
+    margin-right: 6px;
+}
+
+.meta-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+/* ==================== 分页 ==================== */
+.community-pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.community-pagination .page-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    min-width: 32px;
+    text-align: center;
+    font-size: 13px;
+    color: #666666;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E0E0E0;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.community-pagination .page-btn:hover {
+    border-color: #87E8DE;
+    color: #333333;
+}
+
+.community-pagination .page-btn.active {
+    background-color: #87E8DE;
+    border-color: #87E8DE;
+    color: #FFFFFF;
+}
+
+.community-pagination .page-btn.disabled {
+    color: #CCCCCC;
+    border-color: #F0F0F0;
+    cursor: not-allowed;
+}
+
+/* ==================== 侧边栏 ==================== */
+.community-sidebar {
+    position: sticky;
+    top: 90px; /* 考虑导航高度 */
+}
+
+.sidebar-block {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 16px 18px 14px;
+    border: 1px solid #F0F0F0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+    margin-bottom: 16px;
+}
+
+.sidebar-block h3 {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 8px;
+}
+
+.sidebar-list a {
+    font-size: 14px;
+    color: #555555;
+    text-decoration: none;
+    line-height: 1.5;
+    display: inline-block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar-list a:hover {
+    color: #87E8DE;
+    transform: translateX(2px);
+}
+
+/* 活跃用户 */
+.active-user-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.active-user-list li {
+    margin-bottom: 10px;
+}
+
+.active-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.active-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.active-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.active-user-info .name {
+    font-size: 14px;
+    color: #333333;
+}
+
+.active-user-info .stat {
+    font-size: 12px;
+    color: #999999;
+}
+
+/* 公告 */
+.notice-text {
+    font-size: 13px;
+    color: #555555;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.notice-list {
+    list-style: disc;
+    padding-left: 18px;
+    margin: 0;
+}
+
+.notice-list li {
+    font-size: 13px;
+    color: #777777;
+    margin-bottom: 4px;
+    line-height: 1.5;
+}

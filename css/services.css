@@ -1,0 +1,382 @@
+/* ============================================
+   services.css - 健康服务页面专属样式
+   ============================================ */
+
+/* -------------------- 页面头部 -------------------- */
+.page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 60px 0 40px;
+    text-align: center;
+}
+
+.page-header .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.page-header .page-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+.breadcrumb a:hover {
+    opacity: 0.8;
+}
+
+.breadcrumb span {
+    color: #f0f0f0;
+}
+
+/* -------------------- 主体布局 -------------------- */
+.services-main {
+    background-color: #f7f8fc;
+    padding: 40px 0;
+}
+
+.services-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.services-content {
+    flex: 1;
+    min-width: 0; /* 防止内容溢出 */
+}
+
+.services-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+/* 移动端自适应 */
+@media (max-width: 768px) {
+    .services-layout {
+        flex-direction: column;
+    }
+    .services-sidebar {
+        width: 100%;
+    }
+}
+
+/* -------------------- 区块标题 -------------------- */
+.services-section {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.services-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+    color: #333;
+}
+
+/* -------------------- 服务卡片网格 -------------------- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    position: relative;
+    background-color: #fafbff;
+    border: 1px solid #e0e4f0;
+    border-radius: 8px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+}
+
+/* 热门角标 */
+.service-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: linear-gradient(135deg, #ff6b6b, #ff8787);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.service-title {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #333;
+    font-weight: 600;
+}
+
+.service-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 16px;
+    flex: 1; /* 让描述占据剩余空间，保证底部对齐 */
+}
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    list-style: none;
+    padding: 0;
+}
+
+.service-tags li {
+    background-color: #e8ecf7;
+    color: #667eea;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.service-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* 让底部固定在卡片末尾 */
+}
+
+.service-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.service-btn {
+    background-color: #667eea;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.service-btn:hover {
+    background-color: #5568d3;
+    transform: scale(1.05);
+}
+
+.service-btn.primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.service-btn.primary:hover {
+    background: linear-gradient(135deg, #5568d3, #6a3f8f);
+}
+
+/* -------------------- 服务流程步骤 -------------------- */
+.service-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.step-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.step-index {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.step-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* -------------------- FAQ 折叠面板 -------------------- */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background-color: #fafbff;
+    border: 1px solid #e0e4f0;
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    border-color: #667eea;
+    background-color: #f0f2ff;
+}
+
+.faq-item summary {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+    user-select: none;
+}
+
+.faq-item p {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    padding-left: 10px;
+    border-left: 3px solid #667eea;
+}
+
+/* -------------------- 侧边栏样式 -------------------- */
+.sidebar-block {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    color: #333;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 8px;
+}
+
+/* 快速预约表单 */
+.quick-booking-form .form-row {
+    margin-bottom: 14px;
+}
+
+.booking-service-select,
+.booking-name-input,
+.booking-phone-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.booking-service-select:focus,
+.booking-name-input:focus,
+.booking-phone-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.booking-submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.booking-submit-btn:hover {
+    background: linear-gradient(135deg, #5568d3, #6a3f8f);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.booking-tip {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+/* 使用小贴士 */
+.tips-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-list li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.tips-list li::before {
+    content: "💡";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 客服与支持 */
+.support-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.support-list {
+    list-style: none;
+    padding: 0;
+}
+
+.support-list li {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 8px;
+}

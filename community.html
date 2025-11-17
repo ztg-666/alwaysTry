@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社区交流 - 健康社区</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 可选：社区页面单独样式 -->
+    <link rel="stylesheet" href="./css/community.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>健康社区</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="knowledge.html">健康知识</a></li>
+                <li><a href="community.html">社区交流</a></li>
+                <li><a href="services.html">健康服务</a></li>
+                <li><a href="about.html">关于我们</a></li>
+            </ul>
+            <div class="nav-search">
+                <input type="text" placeholder="搜索社区话题...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <header class="page-header">
+        <div class="container">
+            <h2 class="section-title">社区交流</h2>
+            <p class="page-subtitle">在这里分享经验、提出问题、互相鼓励，一起走向更健康的生活方式</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> &gt; <span>社区交流</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主体内容 -->
+    <main class="community-main">
+        <div class="container community-layout">
+            <!-- 左侧：发帖 & 帖子列表 -->
+            <section class="community-content">
+                <!-- 发帖区域 -->
+                <div class="create-post-card">
+                    <h3 class="create-post-title">发表新话题</h3>
+                    <form class="create-post-form">
+                        <div class="form-row">
+                            <input type="text" class="post-title-input" placeholder="请输入话题标题，如：分享我的控糖饮食经验">
+                        </div>
+                        <div class="form-row">
+                            <textarea class="post-content-input" rows="4" placeholder="详细描述您的问题或经验，字数建议在50字以上更容易获得回复哦～"></textarea>
+                        </div>
+                        <div class="form-row form-row-bottom">
+                            <select class="post-category-select">
+                                <option value="">选择话题分类</option>
+                                <option value="disease">疾病管理</option>
+                                <option value="diet">饮食与营养</option>
+                                <option value="sport">运动与减重</option>
+                                <option value="mental">心理与情绪</option>
+                                <option value="life">日常健康习惯</option>
+                            </select>
+                            <button type="button" class="post-submit-btn">发布话题</button>
+                        </div>
+                    </form>
+                    <p class="create-post-tip">请勿发布任何涉及隐私信息、广告或不实医疗信息的内容。</p>
+                </div>
+
+                <!-- 帖子筛选 -->
+                <div class="community-filters">
+                    <div class="filter-left">
+                        <span class="filter-label">话题分类：</span>
+                        <button class="community-filter-btn active" data-category="all">全部</button>
+                        <button class="community-filter-btn" data-category="disease">疾病管理</button>
+                        <button class="community-filter-btn" data-category="diet">饮食营养</button>
+                        <button class="community-filter-btn" data-category="sport">运动健身</button>
+                        <button class="community-filter-btn" data-category="mental">心理健康</button>
+                    </div>
+                    <div class="filter-right">
+                        <span class="filter-label">排序：</span>
+                        <button class="community-sort-btn active" data-sort="latest">最新</button>
+                        <button class="community-sort-btn" data-sort="hot">最热</button>
+                    </div>
+                </div>
+
+                <!-- 帖子列表 -->
+                <div class="community-list">
+                    <!-- 帖子 1 -->
+                    <article class="community-item" data-category="disease" data-replies="26" data-likes="82">
+                        <div class="community-item-header">
+                            <div class="user-info">
+                                <img src="images/user1.jpg" alt="用户头像">
+                                <div class="user-meta">
+                                    <span class="user-name">张女士 · 45岁</span>
+                                    <span class="user-tag">2型糖尿病 · 管理中</span>
+                                </div>
+                            </div>
+                            <span class="post-tag tag-disease">疾病管理</span>
+                        </div>
+                        <h3 class="community-title">糖尿病患者一日三餐应该如何安排？</h3>
+                        <p class="community-excerpt">
+                            我被确诊2型糖尿病已经半年了，目前一直在控制饮食和按时吃药，但是每天到底应该怎么吃，主食、蔬菜和水果的比例总是把握不好，想听听大家的经验...
+                        </p>
+                        <div class="community-meta">
+                            <span class="meta-time">2024-11-15 20:18</span>
+                            <span class="meta-count">💬 26 回复</span>
+                            <span class="meta-count">👍 82</span>
+                        </div>
+                    </article>
+
+                    <!-- 帖子 2 -->
+                    <article class="community-item" data-category="sport" data-replies="45" data-likes="156">
+                        <div class="community-item-header">
+                            <div class="user-info">
+                                <img src="images/user2.jpg" alt="用户头像">
+                                <div class="user-meta">
+                                    <span class="user-name">李先生 · 32岁</span>
+                                    <span class="user-tag">上班族 · 减脂中</span>
+                                </div>
+                            </div>
+                            <span class="post-tag tag-sport">运动健身</span>
+                        </div>
+                        <h3 class="community-title">分享我的减肥经验：3个月减重15斤</h3>
+                        <p class="community-excerpt">
+                            之前体检查出脂肪肝和血脂偏高，下定决心开始减脂。主要从饮食控制和力量+有氧结合入手，分享一下这3个月里对我帮助最大的一些方法和小习惯...
+                        </p>
+                        <div class="community-meta">
+                            <span class="meta-time">2024-11-14 19:05</span>
+                            <span class="meta-count">💬 45 回复</span>
+                            <span class="meta-count">👍 156</span>
+                        </div>
+                    </article>
+
+                    <!-- 帖子 3 -->
+                    <article class="community-item" data-category="mental" data-replies="18" data-likes="94">
+                        <div class="community-item-header">
+                            <div class="user-info">
+                                <img src="images/user3.jpg" alt="用户头像">
+                                <div class="user-meta">
+                                    <span class="user-name">小林 · 27岁</span>
+                                    <span class="user-tag">互联网从业 · 睡眠困扰</span>
+                                </div>
+                            </div>
+                            <span class="post-tag tag-mental">心理健康</span>
+                        </div>
+                        <h3 class="community-title">长期失眠+焦虑，该怎么调整作息？</h3>
+                        <p class="community-excerpt">
+                            最近工作压力比较大，总是担心项目出问题，晚上很难入睡，即使睡着了也会半夜惊醒。想请教大家有没有一些行之有效的放松方法或睡前习惯推荐...
+                        </p>
+                        <div class="community-meta">
+                            <span class="meta-time">2024-11-13 22:41</span>
+                            <span class="meta-count">💬 18 回复</span>
+                            <span class="meta-count">👍 94</span>
+                        </div>
+                    </article>
+
+                    <!-- 帖子 4 -->
+                    <article class="community-item" data-category="diet" data-replies="12" data-likes="51">
+                        <div class="community-item-header">
+                            <div class="user-info">
+                                <img src="images/user4.jpg" alt="用户头像">
+                                <div class="user-meta">
+                                    <span class="user-name">Sunny · 30岁</span>
+                                    <span class="user-tag">轻度脂肪肝</span>
+                                </div>
+                            </div>
+                            <span class="post-tag tag-diet">饮食营养</span>
+                        </div>
+                        <h3 class="community-title">求推荐几道适合脂肪肝的家常菜</h3>
+                        <p class="community-excerpt">
+                            体检发现有轻度脂肪肝，医生建议少油少糖少油炸。想请大家推荐一些好吃又不太“罪恶”的家常菜做法，方便在家自己做的那种...
+                        </p>
+                        <div class="community-meta">
+                            <span class="meta-time">2024-11-12 18:27</span>
+                            <span class="meta-count">💬 12 回复</span>
+                            <span class="meta-count">👍 51</span>
+                        </div>
+                    </article>
+
+                    <!-- 帖子 5 -->
+                    <article class="community-item" data-category="life" data-replies="9" data-likes="37">
+                        <div class="community-item-header">
+                            <div class="user-info">
+                                <img src="images/user5.jpg" alt="用户头像">
+                                <div class="user-meta">
+                                    <span class="user-name">小周 · 24岁</span>
+                                    <span class="user-tag">刚毕业 · 熬夜党</span>
+                                </div>
+                            </div>
+                            <span class="post-tag tag-life">生活习惯</span>
+                        </div>
+                        <h3 class="community-title">熬夜对身体的影响到底有多大？</h3>
+                        <p class="community-excerpt">
+                            自从上大学就习惯晚睡，常常凌晨一两点才睡。最近感觉记忆力下降、白天注意力不集中，想了解一下长期熬夜到底有哪些具体危害，有没有人有亲身感受可以分享？
+                        </p>
+                        <div class="community-meta">
+                            <span class="meta-time">2024-11-11 23:12</span>
+                            <span class="meta-count">💬 9 回复</span>
+                            <span class="meta-count">👍 37</span>
+                        </div>
+                    </article>
+
+                    <!-- 分页 -->
+                    <div class="community-pagination">
+                        <a href="#" class="page-btn disabled">上一页</a>
+                        <a href="#" class="page-btn active">1</a>
+                        <a href="#" class="page-btn">2</a>
+                        <a href="#" class="page-btn">3</a>
+                        <a href="#" class="page-btn">下一页</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 右侧：热门话题 / 活跃用户 / 公告 -->
+            <aside class="community-sidebar">
+                <!-- 热门话题 -->
+                <div class="sidebar-block">
+                    <h3>热门话题</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#"># 糖尿病患者怎么吃更安全？</a></li>
+                        <li><a href="#"># 减脂期还能不能吃水果？</a></li>
+                        <li><a href="#"># 新手跑步容易犯的错误</a></li>
+                        <li><a href="#"># 如何和家人聊自己的焦虑？</a></li>
+                    </ul>
+                </div>
+
+                <!-- 活跃用户 -->
+                <div class="sidebar-block">
+                    <h3>本周活跃用户</h3>
+                    <ul class="active-user-list">
+                        <li>
+                            <div class="active-user">
+                                <img src="images/user2.jpg" alt="用户头像">
+                                <div class="active-user-info">
+                                    <span class="name">李先生</span>
+                                    <span class="stat">本周回复 18 条</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="active-user">
+                                <img src="images/user3.jpg" alt="用户头像">
+                                <div class="active-user-info">
+                                    <span class="name">小林</span>
+                                    <span class="stat">本周发帖 5 条</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="active-user">
+                                <img src="images/user1.jpg" alt="用户头像">
+                                <div class="active-user-info">
+                                    <span class="name">张女士</span>
+                                    <span class="stat">收到点赞 96 次</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 社区公告 -->
+                <div class="sidebar-block">
+                    <h3>社区公告</h3>
+                    <p class="notice-text">
+                        为了给大家营造一个友善、专业的交流环境，请遵守以下原则：
+                    </p>
+                    <ul class="notice-list">
+                        <li>尊重他人，友善交流，不攻击、不歧视。</li>
+                        <li>不发布广告、带推广性质或虚假信息的内容。</li>
+                        <li>涉及具体用药调整请以医生面诊为准，本社区仅作经验分享。</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>健康社区致力于为用户提供专业、便捷的健康服务平台</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快捷链接</h3>
+                    <ul>
+                        <li><a href="knowledge.html">健康知识</a></li>
+                        <li><a href="community.html">社区交流</a></li>
+                        <li><a href="services.html">健康服务</a></li>
+                        <li><a href="about.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>📧 contact@health-community.com</p>
+                    <p>📱 400-123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2077 健康社区. 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/community.js"></script>
+</body>
+</html>
