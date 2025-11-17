@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header class="site-header">
+      <div class="logo">My Site</div>
+      <nav class="nav">
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </header>
+
+    <!-- 主内容 -->
+    <main>
+      <section id="home" class="section hero">
+        <h1>欢迎来到我的网站</h1>
+        <p>这是一个只用 HTML + CSS + JS 实现的纯静态网站。</p>
+        <button id="cta-btn">点我试试看</button>
+      </section>
+
+      <section id="about" class="section">
+        <h2>关于我</h2>
+        <p>这里写你的介绍、项目经验、作品链接等。</p>
+      </section>
+
+      <section id="contact" class="section">
+        <h2>联系我</h2>
+        <form id="contact-form">
+          <label>
+            邮箱：
+            <input type="email" id="email" required />
+          </label>
+          <label>
+            留言：
+            <textarea id="message" required></textarea>
+          </label>
+          <button type="submit">发送</button>
+        </form>
+        <p id="form-result" class="hidden"></p>
+      </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+      © <span id="year"></span> My Site. All rights reserved.
+    </footer>
+
+    <!-- 引入 JS -->
+    <script src="main.js"></script>
+</body>
+</html>
