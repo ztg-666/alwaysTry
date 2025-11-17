@@ -126,6 +126,7 @@
 
 /* ========== 使命愿景 ========== */
 .mission-section {
+    user-select: none;
     background: #fff;
     padding: 60px;
     border-radius: 16px;
@@ -424,6 +425,7 @@
 
 /* ========== 荣誉资质 ========== */
 .honors-section {
+    user-select: none;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 60px;
     border-radius: 16px;
