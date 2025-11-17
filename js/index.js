@@ -1,5 +1,3 @@
-// ==================== 轮播图功能 ====================
-
 class HeroSlider {
     constructor() {
         this.currentSlide = 0;
@@ -14,27 +12,15 @@ class HeroSlider {
     }
     
     init() {
-        if (this.slides.length === 0) return;
-        
-        // 绑定按钮事件
         this.prevBtn?.addEventListener('click', () => this.prevSlide());
         this.nextBtn?.addEventListener('click', () => this.nextSlide());
         
-        // 绑定指示点事件
         this.dots.forEach((dot, index) => {
             dot.addEventListener('click', () => this.goToSlide(index));
         });
         
-        // 键盘控制
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') this.prevSlide();
-            if (e.key === 'ArrowRight') this.nextSlide();
-        });
-        
-        // 开始自动播放
         this.startAutoPlay();
         
-        // 鼠标悬停时暂停自动播放
         const sliderContainer = document.querySelector('.hero-slider');
         sliderContainer?.addEventListener('mouseenter', () => this.stopAutoPlay());
         sliderContainer?.addEventListener('mouseleave', () => this.startAutoPlay());
@@ -62,7 +48,7 @@ class HeroSlider {
     }
     
     startAutoPlay() {
-        this.stopAutoPlay(); // 先清除已有的定时器
+        this.stopAutoPlay(); 
         this.autoPlayInterval = setInterval(() => this.nextSlide(), this.autoPlayDelay);
     }
     
@@ -72,69 +58,35 @@ class HeroSlider {
             this.autoPlayInterval = null;
         }
     }
-    
-    initTouchEvents() {
-        const sliderContainer = document.querySelector('.slider-container');
-        if (!sliderContainer) return;
-        
-        let touchStartX = 0;
-        let touchEndX = 0;
-        
-        sliderContainer.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-        
-        sliderContainer.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            this.handleSwipe();
-        });
-        
-        const handleSwipe = () => {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-                if (diff > 0) {
-                    this.nextSlide();
-                } else {
-                    this.prevSlide();
-                }
-            }
-        };
-        
-        this.handleSwipe = handleSwipe;
-    }
 }
 
 // ==================== 卡片动画效果 ====================
 
 
 function initCardAnimations() {
-    const cards = document.querySelectorAll('.link-card, .article-card, .community-card');
-    
-    const observerOptions = {
+    const cards = document.querySelectorAll(
+        '.link-card, .article-card, .community-card'
+    );
+    // IntersectionObserver（交叉观察器）
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const el = entry.target;
+
+            el.classList.add('show');
+
+            obs.unobserve(el);
+        });
+    }, {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '0';
-                entry.target.style.transform = 'translateY(30px)';
-                
-                setTimeout(() => {
-                    entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, 100);
-                
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    cards.forEach(card => observer.observe(card));
+    });
+
+    cards.forEach(card => {
+        card.classList.add('card-animate');
+        observer.observe(card);
+    });
 }
 
 // ==================== 快捷入口交互 ====================
@@ -145,50 +97,20 @@ function initQuickLinksInteraction() {
     
     linkCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // 添加点击波纹效果
             const ripple = document.createElement('span');
-            ripple.style.cssText = `
-                position: absolute;
-                border-radius: 50%;
-                background-color: rgba(135, 232, 222, 0.5);
-                width: 100px;
-                height: 100px;
-                margin-top: -50px;
-                margin-left: -50px;
-                animation: ripple 0.6s;
-                pointer-events: none;
-            `;
-            
+            ripple.classList.add('ripple');
+
             const rect = this.getBoundingClientRect();
             ripple.style.left = e.clientX - rect.left + 'px';
             ripple.style.top = e.clientY - rect.top + 'px';
-            
+
             this.style.position = 'relative';
             this.style.overflow = 'hidden';
             this.appendChild(ripple);
-            
+
             setTimeout(() => ripple.remove(), 600);
         });
     });
-    
-    // 添加动画关键帧
-    if (!document.querySelector('#ripple-animation')) {
-        const style = document.createElement('style');
-        style.id = 'ripple-animation';
-        style.textContent = `
-            @keyframes ripple {
-                from {
-                    opacity: 1;
-                    transform: scale(0);
-                }
-                to {
-                    opacity: 0;
-                    transform: scale(4);
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    }
 }
 
 // ==================== 文章卡片交互 ====================

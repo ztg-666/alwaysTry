@@ -1,23 +1,5 @@
-// ==================== 通用工具函数 ====================
+// 工具
 
-/**
- * 防抖函数
- * @param {Function} func - 需要防抖的函数
- * @param {number} delay - 延迟时间(毫秒)
- */
-function debounce(func, delay) {
-    let timer;
-    return function(...args) {
-        clearTimeout(timer);
-        timer = setTimeout(() => func.apply(this, args), delay);
-    };
-}
-
-/**
- * 节流函数
- * @param {Function} func - 需要节流的函数
- * @param {number} delay - 延迟时间(毫秒)
- */
 function throttle(func, delay) {
     let lastTime = 0;
     return function(...args) {
@@ -29,11 +11,7 @@ function throttle(func, delay) {
     };
 }
 
-// ==================== 导航栏功能 ====================
-
-/**
- * 导航栏高亮当前页面
- */
+// 导航栏
 function highlightCurrentNav() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('.nav-menu a');
@@ -48,9 +26,6 @@ function highlightCurrentNav() {
     });
 }
 
-/**
- * 搜索功能
- */
 function initSearch() {
     const searchForm = document.querySelector('.nav-search');
     const searchInput = searchForm?.querySelector('input');
@@ -73,47 +48,17 @@ function initSearch() {
     });
 }
 
-/**
- * 执行搜索
- * @param {string} keyword - 搜索关键词
- */
 function performSearch(keyword) {
     if (!keyword) {
         alert('请输入搜索关键词');
         return;
     }
-    
-    // 这里可以跳转到搜索结果页面
-    console.log('搜索关键词:', keyword);
-    // window.location.href = `search.html?q=${encodeURIComponent(keyword)}`;
-    
-    // 临时提示
+
     alert(`搜索功能开发中...\n您搜索的关键词是: ${keyword}`);
 }
 
-// ==================== 页面滚动效果 ====================
+// 返回顶部
 
-/**
- * 监听页面滚动,为导航栏添加阴影效果
- */
-function initScrollEffect() {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-    
-    const handleScroll = throttle(() => {
-        if (window.scrollY > 50) {
-            navbar.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
-        } else {
-            navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-        }
-    }, 100);
-    
-    window.addEventListener('scroll', handleScroll);
-}
-
-/**
- * 平滑滚动到顶部
- */
 function scrollToTop() {
     window.scrollTo({
         top: 0,
@@ -121,36 +66,11 @@ function scrollToTop() {
     });
 }
 
-// ==================== 返回顶部按钮 ====================
-
-/**
- * 创建并初始化返回顶部按钮
- */
 function initBackToTop() {
     // 创建按钮元素
     const backToTopBtn = document.createElement('button');
     backToTopBtn.className = 'back-to-top';
     backToTopBtn.innerHTML = '↑';
-    backToTopBtn.setAttribute('aria-label', '返回顶部');
-    backToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        width: 50px;
-        height: 50px;
-        background-color: #87E8DE;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 24px;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s, visibility 0.3s, background-color 0.3s;
-        z-index: 999;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    `;
-    
     document.body.appendChild(backToTopBtn);
     
     // 滚动显示/隐藏按钮
@@ -179,13 +99,9 @@ function initBackToTop() {
     });
 }
 
-// ==================== 页面加载完成后初始化 ====================
 
 document.addEventListener('DOMContentLoaded', () => {
     highlightCurrentNav();
     initSearch();
-    initScrollEffect();
     initBackToTop();
-    
-    console.log('通用脚本已加载');
 });
